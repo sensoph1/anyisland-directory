@@ -2,8 +2,11 @@ Rails.application.routes.draw do
 
 
 
+  get 'pages/info'
+
+  devise_for :users
   resources :businesses
-  root 'businesses#index'
+  root 'pages#index'
   resources :businesses do
     member do 
       get :delete
