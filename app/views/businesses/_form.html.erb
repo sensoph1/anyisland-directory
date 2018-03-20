@@ -75,6 +75,11 @@
     <%= form.text_field :zip, id: :business_phone %>
   </div>
 
+ <div>
+    <%= form.label :image %>
+    <%= form.file_field :image %>
+  </div>
+
   <div class="field">
     <%= form.label :marketing_copy %>
     <%= form.text_area :marketing_copy, id: :business_phone %>
@@ -83,4 +88,5 @@
   <div class="actions">
     <%= form.submit %>
   </div>
+
 <% end %>

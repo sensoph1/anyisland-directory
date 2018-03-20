@@ -12,7 +12,7 @@
   <strong>Business name:</strong>
   <%= @business.business_name %>
 </p>
-
+<%= image_tag(@business.image.url, alt: 'Image') if @business.image? %>
 <p>
   <strong>Phone:</strong>
   <%= @business.phone %>

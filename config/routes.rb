@@ -12,7 +12,9 @@ Rails.application.routes.draw do
 
 
 
+  #resources :pages
   get 'pages/info'
+  get 'pages/maps'
   root 'pages#index'
   devise_for :users
   #resources :businesses
