@@ -14,7 +14,10 @@ include Cloudinary::CarrierWave
     resize_to_fit(150, 150)
   end
 
-
+version :medium do
+    eager
+    resize_to_fit(550, 550)
+  end
 
 
   # # Choose what kind of storage to use for this uploader:

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+ # mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 # authenticated :user do
 #   root 'businesses#index' as: :root
 #   resources :businesses
@@ -8,9 +9,6 @@ Rails.application.routes.draw do
 # unauthenticated :user do
 #   root 'pages#index', as: :unauthenticated
 # end
-
-
-
 
   #resources :pages
   get 'pages/info'
