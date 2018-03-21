@@ -11,7 +11,7 @@ include Cloudinary::CarrierWave
   
   version :thumbnail do
     eager
-    resize_to_fit(50, 50)
+    resize_to_fit(150, 150)
   end
 
 

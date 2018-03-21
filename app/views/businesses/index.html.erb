@@ -16,20 +16,24 @@
   <tbody>
     <% @businesses.each do |business| %>
       <tr>
-      <hr>
+      
         <td><%= business.last_name %></td>
         <td><%= business.first_name %></td>
         <td><%= business.business_name %></td>
         <td><%= business.phone %></td>
-        <td><%= image_tag (business.image.url(:thumbnail))%><td>
-
+        <td>
+        <a href="<%= business.image.url %>" target="_blank">
+        <%= image_tag(business.image.thumbnail.url, :class => "thumbnail inline") %>
+      </a>
+       
+        
         <td><%= link_to 'Show', business %></td>
         <td><%= link_to 'Edit', edit_business_path(business) %></td>
         <td><%= link_to 'Destroy', business, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
      
     <% end %>
-     <hr>
+     
   </tbody>
 </table>
 
