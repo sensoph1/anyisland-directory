@@ -21,8 +21,9 @@ Rails.application.routes.draw do
   
 
   authenticate :user do
-  resources :businesses, only: [:new, :create, :edit, :update, :destroy]
-end
+    resources :businesses, only: [:new, :create, :edit, :update, :destroy]
+  end
+
 resources :businesses, only: [:index, :show]
   resources :businesses do
     member do 
