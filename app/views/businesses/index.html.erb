@@ -21,7 +21,7 @@
         <td><%= business.first_name %></td>
         <td><%= business.business_name %></td>
         <td><%= business.phone %></td>
-        <td><%= image_tag (business.image.url) %><td>
+        <td><%= image_tag (business.image.url(:thumbnail))%><td>
 
         <td><%= link_to 'Show', business %></td>
         <td><%= link_to 'Edit', edit_business_path(business) %></td>
