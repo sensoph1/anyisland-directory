@@ -3,7 +3,7 @@
 <h1>Businesses</h1>
 
 <table>
-  <thead>
+  <%# <thead>
     <tr>
       <th>Last name</th>
       <th>First name</th>
@@ -11,26 +11,33 @@
       <th>Phone</th>
       <th colspan="3"></th>
     </tr>
-  </thead>
+  </thead> %>
 
   <tbody>
     <% @businesses.each do |business| %>
       <tr>
+      
         <td><%= business.last_name %></td>
         <td><%= business.first_name %></td>
         <td><%= business.business_name %></td>
         <td><%= business.phone %></td>
-
-
-
+        <td>
+        <a href="<%= business.image.url %>" target="_blank">
+        <%= image_tag(business.image.thumbnail.url, :class => "thumbnail inline") %>
+      </a>
+       
+        
         <td><%= link_to 'Show', business %></td>
         <td><%= link_to 'Edit', edit_business_path(business) %></td>
         <td><%= link_to 'Destroy', business, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+     
     <% end %>
+    
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Business', new_business_path %>
+<%= link_to 'New Business', new_business_path %><br />
+ <%= link_to "admin", "/admin"  %>

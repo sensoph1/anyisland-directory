@@ -74,13 +74,24 @@
     <%= form.label :zip %>
     <%= form.text_field :zip, id: :business_phone %>
   </div>
+<div>
+  <label>Current Image</label>
+<%= image_tag(@business.image.medium.url, alt: 'Image') if @business.image? %>
+  </div>
+ <div>
+    <%= form.label :image %>
+    <%= form.file_field :image %>
+</div>
+
+
 
   <div class="field">
     <%= form.label :marketing_copy %>
     <%= form.text_area :marketing_copy, id: :business_phone %>
   </div>
-
+<%# <% cl_image_upload_tag(:image_id, options = {}) %> %>
   <div class="actions">
     <%= form.submit %>
   </div>
+
 <% end %>
